@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Roboto', sans-serif;
+    --text-color: #E1E1E6;
+    --text-color-remove: #F75A68;
+    --background-color: #000;
+    --background-button: #065E7C;
+    --background-button-hover:#FFF;
+    --background-input: #06181C;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+#app {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+header {
+    border-collapse: collapse;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 2.5rem 0;
+    margin-bottom: 8rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    display: flex;
+    width: 40rem;
+    height: 4.8rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .8rem;
+    flex-shrink: 0;
+
+    padding: 1.6rem;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+    border-radius: .5rem;
+    background: #06181C;
+    border: none;
+    color: white;
+}
+
+.search input.invalid {
+    border: 2px solid #F75A68; /* Cor vermelha */
+  }
+  
+
+.search input::placeholder{
+    color: var(--platform-aliases-placeholder, #7C7C8A);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 16px */
+}
+
+.search button {
+    display: flex;
+    padding: 1.2rem 3.2rem;
+    justify-content: center;
+    gap: .8rem;
+    border: none;
+    margin-left: .8rem;
+    border-radius: .5rem;
+    background: #065E7C;
+
+    cursor: pointer;
+
+    color: var(--neutral-colors-white, #FFF);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.4rem; /* 171.429% */
+    text-transform: uppercase;
+}
+
+.search button:hover {
+    background: #FFF;
+    color: #065E7C;
+    transition: 1s ease;
+}
+
+.botao-hover:hover svg path {
+    fill: #065E7C;
+    transition: fill 1s ease;
+  }
+
+  .table-container {
+    max-height: 600px; /* Defina a altura máxima que você deseja que a tabela tenha antes de habilitar o scroll */
+    overflow-y: auto;
+    border: 1px solid #4A808C;
+    border-radius: 12px;
+    background-color: #06181C; /* Cor de fundo desejada */
+  }
+
+  .table-container::-webkit-scrollbar {
+    width: 6px;
+    height: 122px;
+  }
+  
+  /* Estiliza o polegar da barra de rolagem */
+  .table-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #4A808C;
+  }
+  
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+table * {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+
+table th {
+    background: #092D38;
+    text-align: left;
+    font-weight: normal;
+    padding: 1.5rem;
+
+}
+
+
+table tr:nth-child(even) {
+    background: #082a31;
+}
+
+table tr:nth-child(odd) {
+    background: #06161c;
+}
+
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #4A808C;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    background: none;
+    border: none;
+
+    color: var(--text-color-remove);
+    font-family: Roboto;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 32px */
+}
+
+    .empty-row {
+        background-color: #082a31;
+    }
+  
+  .empty-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100%; /* Adiciona altura para ocupar todo o espaço disponível */
+    padding: 20rem 0;
+  }
+  
+  .empty-content svg {
+    width: 100px; /* Defina a largura do SVG conforme necessário */
+    height: auto; /* Permite que a altura seja ajustada proporcionalmente à largura */
+    margin-bottom: 1rem; /* Espaçamento entre o SVG e o texto */
+  }
+  
+  .empty-content p {
+    color: #4E5455;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24.781px; /* 61.953% */
+    margin-left: 6rem;
+  }
+  
+
+  
+  
